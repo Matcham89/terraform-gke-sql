@@ -1,9 +1,19 @@
-gcloud services enable \
-    compute.googleapis.com \
-    sqladmin.googleapis.com \
-    container.googleapis.com \
-    artifactregistry.googleapis.com \
-    cloudbuild.googleapis.com \
-    servicenetworking.googleapis.com \
-    sql-component.googleapis.com \ 
-    cloudbuild.googleapis.com \
+
+    gcloud services enable compute.googleapis.com
+    gcloud services enable sqladmin.googleapis.com
+    gcloud services enable container.googleapis.com
+    gcloud services enable artifactregistry.googleapis.com
+    gcloud services enable cloudbuild.googleapis.com 
+    gcloud services enable servicenetworking.googleapis.com
+    gcloud services enable sql-component.googleapis.com
+    gcloud services enable cloudbuild.googleapis.com 
+    gcloud services enable cloudresourcemanager.googleapis.com
+
+
+
+
+CLOUDBUILD_SA="$(gcloud projects describe $PROJECT_ID \
+    --format 'value(projectNumber)')@cloudbuild.gserviceaccount.com"
+
+    gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member serviceAccount:$CLOUDBUILD_SA --role roles/editor
