@@ -49,9 +49,15 @@ metadata:
   labels:
     run: my-nginx
 spec:
+  type: LoadBalancer
   ports:
-  - port: 80
+  - port: 8080
+    targetPort: 80
     protocol: TCP
+    name: http
+  - port: 443
+    protocol: TCP
+    name: https
   selector:
     run: my-nginx
 ```
