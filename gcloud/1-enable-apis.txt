@@ -1,0 +1,9 @@
+gcloud services enable \
+    compute.googleapis.com \
+    sqladmin.googleapis.com \
+    container.googleapis.com \
+    artifactregistry.googleapis.com \
+    cloudbuild.googleapis.com \
+    servicenetworking.googleapis.com \
+    sql-component.googleapis.com \ 
+    cloudbuild.googleapis.com \

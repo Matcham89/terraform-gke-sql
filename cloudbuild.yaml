@@ -1,0 +1,36 @@
+steps:
+- id: 'tf plan'
+  name: 'hashicorp/terraform:1.0.0'
+  entrypoint: 'sh'
+  args:
+  - '-c'
+  - |
+    echo "branch $BRANCH_NAME"
+    if [ ! -z "$BRANCH_NAME" -a -d "apps_bro_project/enviroments/$BRANCH_NAME/"]; "apps_bro_project/enviroments/$BRANCH_NAME/"  
+      cd "apps_bro_project/enviroments//$BRANCH_NAME/"
+      echo "run init"
+      terraform init
+      echo "run validate"
+      terraform valiadate
+      echo "run plan"
+      terraform plan -out terraform.plan
+      terraform apply -auto-approve terraform.plan
+    else
+      for dir in "terraform/enviroment/*/
+      do
+        cd ${dir}
+        env=${dir%*/}
+        env=${env#*/}
+        echo ""
+        echo "**************TERRAFORM PLAN**************"
+        echo "**********At Enviroment: ${env}***********"
+        echo "******************************************"
+        terraform init
+        terraform validate
+        terraform plan || exit 1
+        cd ../../
+     done
+    fi
+    
+
+      
