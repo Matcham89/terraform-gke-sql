@@ -1,3 +1,7 @@
+locals {
+  env = "prod"
+}
+
 #define the provider of the infrastructure
 provider "google" {
     project = var.project
