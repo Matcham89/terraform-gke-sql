@@ -42,7 +42,7 @@ steps:
         cd terraform-gke-sql/environments/$BRANCH_NAME
         terraform plan
       else
-        for dir in environments/*/
+        for dir in terraform-gke-sql/environments/*/
         do 
           cd ${dir}   
           env=${dir%*/}
