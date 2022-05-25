@@ -1,5 +1,5 @@
 steps:
-- id: 'branch name'
+- id: 'dev'
   name: 'alpine'
   entrypoint: 'sh'  
   args: 
