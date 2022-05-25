@@ -8,7 +8,7 @@ provider "google" {
 terraform {
     backend "gcs" {
         bucket = "dev-state-bucket-001"
-        prefix = "dev/state"
+        prefix = "env/dev"
     }
 
 #version control
