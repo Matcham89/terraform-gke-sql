@@ -2,7 +2,7 @@
 variable "project" {
   description = "id of the project being worked on"
   type        = string
-  default     = "terraform-prod-env-351309"
+  default     = "terraform-production-env"
 }
 
 variable "region" {
