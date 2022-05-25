@@ -17,6 +17,7 @@
 - Visual Studio Code
 
 # Task 1
+### Show a public “Hello world” Application running on GCP
 This is accomplished by applying the following YAML file to the built k8s infrastructure
 ```sh
 apiVersion: apps/v1
@@ -42,7 +43,6 @@ spec:
 
 I then apply a service to expose the app publicly
 ```sh
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -64,6 +64,9 @@ spec:
 ```
 
 # Task 2
+### Show a public “Hello world” Application running on GCP
+### Run the Application on a private secure network
+### Connect the Application to a secure SQL instance
 
 I built the Kubernetes cluster on a private VPC "vpc-appsbro-01", aswell as the SQL database.
 
@@ -190,6 +193,10 @@ spec:
 ```
 
 # Task 3
+### Show a public “Hello world” Application running on GCP
+### Run the Application on a private secure network
+### Connect the Application to a secure SQL instance
+### Make the Application flexible 
 
 The benefits of Kubernetes
 
@@ -201,12 +208,24 @@ Instance managed groups is another way of managing scalability
 
 # Task 4
 
+### Show a public “Hello world” Application running on GCP
+### Run the Application on a private secure network
+### Connect the Application to a secure SQL instance
+### Make the Application flexible 
+### Make the Application cost effective
+
 Cost Optimisation options can be managed through load against CPU and/or HTTP traffic. 
 Using Instance Groups or K8s
 
 Cost Optimisation can also be managed by changing the machine build. Using only the required amount of CPU and Storage with little overhead. Google also makes optimisation suggestions
 
 # Task 5
+### Show a public “Hello world” Application running on GCP
+### Run the Application on a private secure network
+### Connect the Application to a secure SQL instance
+### Make the Application flexible 
+### Make the Application cost effective
+### Make the Application secure
 
 Best practise - allow as little control as possible.
 Example - The network engineer needs access to administrate the firewalls. This can be done on a Per Organization/Project/Role level, if there only need access to one project - just apply permissions to that one project. Do not grant Organization right which will give them access to 100+ projects. This opens the door for human error and possible "end of bussiness" events. 
@@ -334,13 +353,5 @@ Each project has its own CloudBuild trigger and Repo Branch.
 - prod = prod branch
 
 Once changed made to dev have been tested and approved, they can be moved into the production file and applied to the production branch.
-
-
-
-
-
-
-
-
 
 
