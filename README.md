@@ -42,6 +42,7 @@ spec:
 
 I then apply a service to expose the app publicly
 ```sh
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -49,9 +50,15 @@ metadata:
   labels:
     run: my-nginx
 spec:
+  type: LoadBalancer
   ports:
-  - port: 80
+  - port: 8080
+    targetPort: 80
     protocol: TCP
+    name: http
+  - port: 443
+    protocol: TCP
+    name: https
   selector:
     run: my-nginx
 ```
