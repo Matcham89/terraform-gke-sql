@@ -26,6 +26,9 @@ resource "google_compute_subnetwork" "vpc_private" {
         range_name = "k8s-service-range"
         ip_cidr_range = "10.52.0.0/20"
     }
+    depends_on = [
+      google_compute_network.vpc_webapp
+    ]
 }
 
 

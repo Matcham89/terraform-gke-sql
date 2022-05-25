@@ -11,7 +11,7 @@ provider "google" {
 #backend storage
 terraform {
     backend "gcs" {
-        bucket = "prod-state-bucket-001"
+        bucket = "prod-state-bucket-002"
         prefix = "env/prod"
     }
 
