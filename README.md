@@ -16,6 +16,11 @@
 - Kubernetes
 - Visual Studio Code
 
+## The Plan
+![alt text](https://github.com/Matcham89/terraform-gke-sql/blob/dev/additional-files/gke-sql.png?raw=true)
+
+
+
 # Task 1
 ### Show a public “Hello world” Application running on GCP
 This is accomplished by applying the following YAML file to the built k8s infrastructure
