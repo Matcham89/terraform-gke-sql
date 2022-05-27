@@ -1,3 +1,5 @@
+#26/05/2022 - last update
+
 # [START cloud_sql_mysql_databasesql_gke_quickstart_deployment]
 apiVersion: apps/v1
 kind: Deployment

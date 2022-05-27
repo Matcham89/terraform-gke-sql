@@ -1,3 +1,4 @@
+#26/05/2022 - last update
 #VPC creation
 resource "google_compute_network" "vpc_webapp" {
   name                              = var.vpc

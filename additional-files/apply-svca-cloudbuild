@@ -1,3 +1,4 @@
+#26/05/2022 - last update
 
 CLOUDBUILD_SA="$(gcloud projects describe $PROJECT_ID \
     --format 'value(projectNumber)')@cloudbuild.gserviceaccount.com"

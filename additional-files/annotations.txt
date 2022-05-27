@@ -1,3 +1,5 @@
+  #26/05/2022 - last update
+  
   kubectl annotate serviceaccount \
   ksa-cloud-sql  \
   iam.gke.io/gcp-service-account=kubernetes-svca@webapp-dev-00001.iam.gserviceaccount.com
