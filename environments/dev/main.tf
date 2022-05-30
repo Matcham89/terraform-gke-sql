@@ -123,7 +123,7 @@ resource "google_container_cluster" "cluster_id" {
             disabled = true
         }
         horizontal_pod_autoscaling {
-            disabled = false
+            disabled = true
         }
     }
     release_channel {
