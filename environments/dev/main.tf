@@ -154,12 +154,18 @@ resource "google_container_cluster" "cluster_id" {
 resource "google_container_node_pool" "asuna" {
     name = var.k8snode1
     cluster = google_container_cluster.cluster_id.id
-    node_count = 3
+    node_count = 2
 
     management {
     auto_repair = true
     auto_upgrade = true
     }
+
+
+    autoscaling {
+        min_node_count = var.min_node_count
+        max_node_count = var.max_node_count
+        }
 
 
     node_config {
