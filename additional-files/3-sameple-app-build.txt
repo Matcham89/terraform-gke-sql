@@ -1,0 +1,2 @@
+gcloud builds submit \
+  --tag europe-west2-docker.pkg.dev/terraform-dev-env-351309/repo/gke-sql .

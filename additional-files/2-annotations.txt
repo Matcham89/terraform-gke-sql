@@ -1,0 +1,5 @@
+  #26/05/2022 - last update
+  
+  kubectl annotate serviceaccount \
+  ksa-cloud-sql  \
+  iam.gke.io/gcp-service-account=kubernetes-svca@terraform-dev-env-351309.iam.gserviceaccount.com
